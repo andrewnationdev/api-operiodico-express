@@ -67,6 +67,22 @@ Portugal começou a sofrer ameaças da França, e quando D. João VI soube de qu
   }
 ];
 
+app.get('/post', (req, res) => {
+  const id = req.query.id;
+  
+  if (!id) {
+    return res.status(400).send({ error: 'ID não fornecido' });
+  }
+
+  const article = articles.find(a => a.id == id);
+
+  if (!article) {
+    return res.status(404).send({ error: 'Artigo não encontrado' });
+  }
+
+  res.send(article);
+});
+
 app.get('/all_posts', (req, res) => {
   res.send(articles);
 })
