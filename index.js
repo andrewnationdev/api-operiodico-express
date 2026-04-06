@@ -50,8 +50,12 @@ const articles = [
   }
 ];
 
+app.get('/all_posts', (req, res) => {
+  res.send(articles);
+})
+
 app.get('/', (req, res) => {
-  res.send(articles)
+  res.send(articles);
 })
 
 app.listen(port, () => {
