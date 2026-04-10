@@ -1,6 +1,14 @@
 const express = require('express')
+const cors = require('cors');
+
 const app = express()
 const port = 3000
+
+app.use(cors({
+  origin: 'https://operiodico.vercel.app/',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 const articles = [
   {
