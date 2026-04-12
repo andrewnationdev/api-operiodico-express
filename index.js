@@ -1,5 +1,4 @@
 const express = require('express')
-const cors = require('cors');
 
 const app = express()
 const port = 3000
@@ -16,6 +15,16 @@ app.use((req, res, next) =>  {
 
     next();
 });
+
+const meses = {
+  "Janeiro": 0, "Fevereiro": 1, "Março": 2, "Abril": 3, "Maio": 4, "Junho": 5,
+  "Julho": 6, "Agosto": 7, "Setembro": 8, "Outubro": 9, "Novembro": 10, "Dezembro": 11
+};
+
+const parseData = (dataStr) => {
+  const [dia, mesNome, ano] = dataStr.replace(",", "").split(" ");
+  return new Date(ano, meses[mesNome], dia);
+};
 
 const articles = [
   {
@@ -67,13 +76,13 @@ const articles = [
     id: 14,
     title: "A Infância de Dom Pedro I",
     excerpt: "O Príncipe Pedro de Alcântara nasceu no dia 12 de outubro de 1798 no palácio de Queluz em Portugal. Filho dos Príncipes D. João VI e D. Carlota Joaquina da Espanha.",
-    content: `O Príncipe Pedro de Alcântara nasceu no dia 12 de outubro de 1798 no palácio de Queluz em Portugal. Filho dos Príncipes D. João VI e D. Carlota Joaquina da Espanha. Na época em que ele nasceu a Europa se encontrava em polvorosa, era uma época cheia de incertezas, e isso se deve por conta da Revolução Francesa que aconteceu anos antes do D. Pedro nascer em 1789. 
+    content: `O Príncipe Pedro de Alcântara nasceu no dia 12 de outubro de 1798 no palácio de Queluz em Portugal. Filho dos Príncipes D. João VI e D. Carlota Joaquina da Espanha. Na época em que ele nasceu a Europa se encontrava em polvorosa, era uma época cheia de incertezas, e isso se deve por conta da Revolução Francesa que aconteceu anos antes do D. Pedro nascer em 1789. </br>
 
-Um ano após o seu nascimento, na França aconteceu o golpe de 18 de Brumário, quando Napoleão Bonaparte subiu ao poder na França. 
+Um ano após o seu nascimento, na França aconteceu o golpe de 18 de Brumário, quando Napoleão Bonaparte subiu ao poder na França. </br>
 
-Seu irmão mais velho D. Antônio Principe da Beira, faleceu e Pedro se tornou o herdeiro e Principe da Beira. 
+Seu irmão mais velho D. Antônio Principe da Beira, faleceu e Pedro se tornou o herdeiro e Principe da Beira. </br>
 
-O príncipe foi criado em Queluz junto de sua avó a Rainha Maria I  que foi impedida de governar por ser considerada “louca”, ficando como regente seu filho mais velho D. João VI. A rainha na época já demonstrava ter problemas psíquicos devido a algumas perdas familiares, e hoje em dia, estudiosos acreditam que ela tenha tido depressão. 
+O príncipe foi criado em Queluz junto de sua avó a Rainha Maria I  que foi impedida de governar por ser considerada “louca”, ficando como regente seu filho mais velho D. João VI. A rainha na época já demonstrava ter problemas psíquicos devido a algumas perdas familiares, e hoje em dia, estudiosos acreditam que ela tenha tido depressão. </br>
 
 Portugal começou a sofrer ameaças da França, e quando D. João VI soube de que havia a possibilidade de a França invadir Portugal. D. João decidiu levar toda a corte para o Brasil, onde não haveria o risco de ter a sua coroa derrubada pelos franceses. `,
     date: "06 Abril, 2026",
@@ -81,6 +90,10 @@ Portugal começou a sofrer ameaças da França, e quando D. João VI soube de qu
     category: "História do Brasil"
   }
 ];
+
+const orderArticles = (data) => {
+  return data.sort((a, b) => parseData(b.date) - parseData(a.date));
+}
 
 app.get('/post', (req, res) => {
   const id = req.query.id;
@@ -99,11 +112,11 @@ app.get('/post', (req, res) => {
 });
 
 app.get('/all_posts', (req, res) => {
-  res.send(articles);
+  res.send(orderArticles(articles));
 })
 
 app.get('/', (req, res) => {
-  res.send(articles);
+  res.send(orderArticles(articles));
 })
 
 app.listen(port, () => {
