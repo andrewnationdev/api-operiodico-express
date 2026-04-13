@@ -76,15 +76,13 @@ const articles = [
     id: 14,
     title: "A Infância de Dom Pedro I",
     excerpt: "O Príncipe Pedro de Alcântara nasceu no dia 12 de outubro de 1798 no palácio de Queluz em Portugal. Filho dos Príncipes D. João VI e D. Carlota Joaquina da Espanha.",
-    content: `O Príncipe Pedro de Alcântara nasceu no dia 12 de outubro de 1798 no palácio de Queluz em Portugal. Filho dos Príncipes D. João VI e D. Carlota Joaquina da Espanha. Na época em que ele nasceu a Europa se encontrava em polvorosa, era uma época cheia de incertezas, e isso se deve por conta da Revolução Francesa que aconteceu anos antes do D. Pedro nascer em 1789. </br>
-
-Um ano após o seu nascimento, na França aconteceu o golpe de 18 de Brumário, quando Napoleão Bonaparte subiu ao poder na França. </br>
-
-Seu irmão mais velho D. Antônio Principe da Beira, faleceu e Pedro se tornou o herdeiro e Principe da Beira. </br>
-
-O príncipe foi criado em Queluz junto de sua avó a Rainha Maria I  que foi impedida de governar por ser considerada “louca”, ficando como regente seu filho mais velho D. João VI. A rainha na época já demonstrava ter problemas psíquicos devido a algumas perdas familiares, e hoje em dia, estudiosos acreditam que ela tenha tido depressão. </br>
-
-Portugal começou a sofrer ameaças da França, e quando D. João VI soube de que havia a possibilidade de a França invadir Portugal. D. João decidiu levar toda a corte para o Brasil, onde não haveria o risco de ter a sua coroa derrubada pelos franceses. `,
+    content: `O Príncipe Pedro de Alcântara, filho dos Príncipes D. João VI e D. Carlota Joaquina da Espanha, nasceu em 12 de outubro de 1798, no palácio de Queluz, em Portugal. Na época em que ele nasceu a Europa se encontrava em polvorosa, devido à revolução francesa, em 1789, que pôs fim ao regime absolutista que imperava na época, trazendo novos ideais para época como o liberalismo. 
+<p>Um ano após o seu nascimento, houve o golpe de 18 de Brumário, quando Napoleão Bonaparte ascendeu ao trono. Até então, Pedro não era o herdeiro do trono português e sim seu irmão mais velho D. Antônio Principe da Beira, que faleceu em 1801, deixando para Pedro o título de herdeiro. Ao todo, D. João e Carlota tiveram 9 filhos, entretando apenas 7 sobreviveram até a fase adulta.</p>
+<p>O príncipe foi criado em Queluz, junto de sua avó a Rainha Maria I, afastada do governo por ter sido considerada “louca” em 1792. Seu filho mais velho D. João VI ficou como regente. A rainha demonstrava ter problemas psíquicos à época devido a algumas perdas familiares. Atualmente, estudiosos acreditam que ela tenha tido depressão. </p>
+<p>Portugal encontrava-se em uma posição bastante delicada, visto que a Europa passava por inúmeros conflitos e queriam que D. João escolhesse em qual lado iria ficar. No entanto, Portugal optou por manter uma relação neutra. Com a ascensão de Napoleão em 1804 e o seu desejo de mudar o mapa da Europa, acontecem várias guerras que culminam da queda de diversos governantes. Bonaparte coloca seus parentes para reinar nestes países. Como se não bastasse, ele almejava rebaixar a Inglaterra como grande potência. Então, em 1806, ele decreta o bloqueio continental, proibindo outros países de comercializarem com a Inglaterra, a fim de sufocar a economia do país.
+Como a Inglaterra era um importantíssimo aliado de Portugal, a situação afetou diretamente o país. D. João sempre tentou manter uma posição neutra enquanto buscava soluções para o problema. Em 1807, Napoleão ameaça Portugal, dizendo que se o país não declarasse guerra à Inglaterra, ele o invadiria junto com a Espanha. Sem alternativa viável, o Regente optou pela mudança a corte portuguesa para o Brasil, à época colônia portuguesa. Com isso, o plano era dificultar a chance de invasão da França e a derrubada de sua coroa.</p>
+<p>D. Pedro tinha nove anos na ocasião da vinda da corte portuguesa ao Brasil. A corte ficou primeiro em Salvador e fixaram-se posteriormente no Rio de Janeiro. D. Pedro teve uma educação negligenciada, mas apesar disso pôde iniciar-se em matemática, lógica, história, geografia e ecônomia política. No que concerne às línguas, aprendeu latim, francês e inglês. O príncipe tinha autonomia para decidir não participar das aulas e os criados acatavam as suas vontades sem discussão.</p>
+`,
     date: "06 Abril, 2026",
     author: "Anderson Pereira Justiniano",
     category: "História do Brasil"
